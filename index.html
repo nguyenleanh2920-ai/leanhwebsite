@@ -218,6 +218,24 @@
       gap: 20px;
     }
 
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+    }
+
+    .school-logo {
+      width: 42px;
+      height: 42px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 0 18px rgba(139, 233, 253, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      display: block;
+    }
+
     .logo {
       font-size: 1.35rem;
       font-weight: 800;
@@ -911,7 +929,10 @@
   <!-- Header -->
   <header>
     <nav>
-      <a href="#home" class="logo">Wetdy ✨</a>
+      <a href="#home" class="brand" aria-label="Wetdy home">
+        <img src="Logo-HCMIU.svg.webp" alt="School logo" class="school-logo" />
+        <span class="logo">Wetdy ✨</span>
+      </a>
 
       <div class="nav-right">
         <ul class="nav-links" id="navLinks">
@@ -937,7 +958,7 @@
     <section id="home">
       <div class="container hero">
         <div class="hero-text reveal">
-          <h3>Chào mừng đến với thế giới anime của mình</h3>
+          <h3>Chào mừng đến với thế giới của mình</h3>
           <h1>Mình là <span>Nguyễn Lê Anh</span></h1>
           <p>
             Mình là một người yêu thích anime, thích những câu chuyện có chiều sâu,
@@ -956,7 +977,7 @@
             </div>
           <h2>Gacha Game Lover</h2>
           <p>
-            Tôi là một người yêu thích anime, thích những câu chuyện có chiều sâu,
+            Tôi là một người yêu thích gacha games, thích những câu chuyện có chiều sâu,
             nhân vật có cảm xúc thật, màu sắc nổi bật và giao diện đẹp mang dấu ấn cá nhân.
           </p>
 
@@ -1042,8 +1063,7 @@
             <div class="anime-content">
               <h3>Wuthering Waves</h3>
               <p>
-                Mình thích những bộ anime có tinh thần chiến đấu, vượt qua giới hạn,
-                tình bạn và ý chí mạnh mẽ. Đây là thể loại luôn mang lại nguồn động lực rất lớn.
+                Thế giới mở hậu tận thế với nhịp độ chiến đấu dồn dập và cơ chế hành động tốc độ cao. Mình đặc biệt ấn tượng với hệ thống combat mãn nhãn, đòi hỏi kỹ năng linh hoạt cùng nền đồ họa sắc nét.
               </p>
             </div>
           </article>
@@ -1055,8 +1075,7 @@
             <div class="anime-content">
               <h3>Neverness to Everness</h3>
               <p>
-                Những thế giới phép thuật, nhân vật bí ẩn, khung cảnh đẹp và cốt truyện kỳ ảo
-                luôn khiến mình bị cuốn hút và cảm thấy đầy tưởng tượng.
+                Sự kết hợp hoàn hảo giữa thế giới mở đô thị hiện đại và các yếu tố siêu nhiên. Mình cực kỳ cuốn hút bởi trải nghiệm lái xe khám phá thành phố sống động cùng phong cách nghệ thuật đầy ấn tượng.
               </p>
             </div>
           </article>
@@ -1068,8 +1087,7 @@
             <div class="anime-content">
               <h3>Honkai: Star Rail</h3>
               <p>
-                Mình cũng thích những bộ anime nhẹ nhàng, gần gũi và nhiều cảm xúc,
-                giúp thư giãn, ấm áp và dễ đồng cảm với những khoảnh khắc đời thường.
+                Hành trình khai phá vũ trụ kỳ vĩ với lối chơi turn-based đậm chất chiến thuật. Cốt truyện sâu sắc, đan xen yếu tố hài hước cùng những pha tung chiêu mang tầm điện ảnh luôn đem lại cho mình trải nghiệm tuyệt vời.
               </p>
             </div>
           </article>
@@ -1083,7 +1101,7 @@
         <div class="quote-box reveal">
           <h2>💫 Câu nói yêu thích</h2>
           <p id="animeQuote">
-            “Anime không chỉ là giải trí, mà còn là nơi cảm xúc, ước mơ và cá tính được thể hiện tuyệt vời.”
+            “Gacha games không chỉ là giải trí, mà còn là nơi cảm xúc, ước mơ và cá tính được thể hiện tuyệt vời.”
           </p>
         </div>
       </div>
@@ -1094,14 +1112,14 @@
       <div class="container">
         <h2 class="section-title reveal">📩 Liên hệ</h2>
         <p class="section-subtitle reveal">
-          Nếu bạn cũng yêu thích anime và muốn kết nối, hãy liên hệ với mình nhé.
+          Nếu bạn cũng yêu thích gacha games và muốn kết nối, hãy liên hệ với mình nhé.
         </p>
 
         <div class="contact-card reveal">
           <p>
-            <strong>Chủ web:</strong> Nguyễn Lê Anh - 12TH<br />
-            <strong>Chủ đề:</strong> Website cá nhân về anime và giới thiệu bản thân<br />
-            <strong>Phiên bản:</strong> Anime Profile<br />
+            <strong>Host web:</strong> Nguyễn Lê Anh - International University - VNUHCM<br />
+            <strong>Topic:</strong> Website cá nhân về gacha games và giới thiệu bản thân<br />
+            <strong>Version:</strong> Gacha game Profile<br />
             <strong>Email:</strong> nguyenleanh2920@gmail.com
           </p>
 
@@ -1189,11 +1207,11 @@
        Quote Auto Change
     ========================= */
     const quotes = [
-      "Anime không chỉ là giải trí, mà còn là nơi cảm xúc, ước mơ và cá tính được thể hiện tuyệt vời.",
-      "Mỗi bộ anime là một thế giới riêng, và mỗi nhân vật đều mang theo một bài học đáng nhớ.",
-      "Đam mê anime giúp mình tìm thấy cảm hứng, sự sáng tạo và một phần con người thật của bản thân.",
+      "Gacha games không chỉ là giải trí, mà còn là nơi cảm xúc, ước mơ và cá tính được thể hiện tuyệt vời.",
+      "Mỗi bộ gacha game là một thế giới riêng, và mỗi nhân vật đều mang theo một bài học đáng nhớ.",
+      "Đam mê gacha games giúp mình tìm thấy cảm hứng, sự sáng tạo và một phần con người thật của bản thân.",
       "Tớ luôn tin rằng, sở thích cũng có thể trở thành dấu ấn riêng của mỗi người.",
-      "Một giao diện đẹp cũng giống như một opening anime hay — nhìn là muốn ở lại lâu hơn."
+      "Một giao diện đẹp cũng giống như một opening gacha game hay — nhìn là muốn ở lại lâu hơn."
     ];
 
     const quoteElement = document.getElementById("animeQuote");
