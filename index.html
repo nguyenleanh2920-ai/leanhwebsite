@@ -19,12 +19,12 @@
       --bg-1: #0f1021;
       --bg-2: #171934;
       --bg-3: #2a1458;
-      --pink: #ff4ecd;
-      --pink-light: #ff9cf0;
-      --purple: #8c52ff;
+      --pink: #24c292;
+      --pink-light: #41df4e;
+      --purple: #135dbe;
       --blue: #8be9fd;
       --white: #ffffff;
-      --text-soft: #d7d8f3;
+      --text-soft: #e8e8ee;
       --text-muted: #cfd0eb;
       --card: rgba(255, 255, 255, 0.08);
       --card-2: rgba(255, 255, 255, 0.10);
@@ -35,7 +35,7 @@
       --nav-height: 78px;
     }
 
-    * {
+    *{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -50,7 +50,9 @@
     body {
       font-family: "Poppins", sans-serif;
       color: var(--white);
-      background: linear-gradient(135deg, var(--bg-1), var(--bg-2), var(--bg-3));
+      background:
+        linear-gradient(rgba(15, 16, 33, 0.72), rgba(15, 16, 33, 0.72)),
+        url("Qingxiao 5.jpg") center/cover no-repeat fixed;
       min-height: 100vh;
     }
 
@@ -173,7 +175,7 @@
       top: -40px;
       width: 14px;
       height: 10px;
-      background: linear-gradient(135deg, #ffd1ea, #ff9cd3);
+      background: linear-gradient(135deg, #ffd1ea, #26cfab);
       border-radius: 70% 0 70% 0;
       opacity: 0.8;
       filter: drop-shadow(0 0 8px rgba(255, 156, 211, 0.35));
@@ -410,15 +412,16 @@
       overflow: hidden;
       border: 3px solid rgba(255, 255, 255, 0.2);
       box-shadow:
-        0 0 20px rgba(255, 78, 205, 0.35),
-        0 0 35px rgba(108, 99, 255, 0.25);
+        0 0 20px rgba(7, 223, 122, 0.35),
+        0 0 35px rgba(4, 161, 127, 0.726);
     }
 
     .avatar img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: 50% 10%;
+      transform: scale(1.08);
       display: block;
     }
 
@@ -568,19 +571,25 @@
       overflow: hidden;
       background: linear-gradient(135deg, var(--pink), #6c63ff, #00d4ff);
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .anime-image img {
+    .anime-image img,
+    .anime-image video {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: center center;
       display: block;
-      transition: transform 0.45s ease;
+      transition: transform 0.45s ease, object-position 0.45s ease;
     }
 
-    .anime-card:hover .anime-image img {
-      transform: scale(1.05);
+    .anime-card:hover .anime-image img,
+    .anime-card:hover .anime-image video {
+      transform: scale(1.18);
+      object-position: center center;
     }
 
     .anime-content {
@@ -691,31 +700,65 @@
       cursor: pointer;
       border-radius: 999px;
       padding: 11px 14px;
-      color: white;
-      font-weight: 600;
-      background: linear-gradient(90deg, var(--pink), var(--purple));
-      box-shadow: 0 0 18px rgba(255, 78, 205, 0.32);
+      color: #ffffff;
+      font-weight: 700;
+      background: linear-gradient(135deg, #8be9fd, #1a91c0, #15a160);
+      box-shadow: 0 0 20px rgba(139, 233, 253, 0.38);
       transition: 0.3s ease;
     }
 
     .music-btn:hover {
       transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 0 24px rgba(255, 78, 205, 0.5);
+      box-shadow: 0 0 26px rgba(139, 233, 253, 0.55);
     }
 
     .volume-wrap {
       display: flex;
       align-items: center;
       gap: 8px;
-      color: #f4f5ff;
+      color: #edf7ff;
       font-size: 0.92rem;
       white-space: nowrap;
     }
 
     .volume-slider {
       width: 110px;
-      accent-color: var(--pink);
+      accent-color: #2db6ec;
       cursor: pointer;
+      filter: drop-shadow(0 0 8px rgba(139, 233, 253, 0.35));
+    }
+
+    .volume-slider::-webkit-slider-runnable-track {
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #8be9fd, #22c767);
+    }
+
+    .volume-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2px solid #8be9fd;
+      margin-top: -4px;
+      box-shadow: 0 0 12px rgba(139, 233, 253, 0.5);
+    }
+
+    .volume-slider::-moz-range-track {
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #8be9fd, #2cc0b4);
+    }
+
+    .volume-slider::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2px solid #8be9fd;
+      box-shadow: 0 0 12px rgba(139, 233, 253, 0.5);
     }
 
     /* =========================
@@ -874,7 +917,7 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="#home">Trang chủ</a></li>
           <li><a href="#about">Về tôi</a></li>
-          <li><a href="#anime">Anime</a></li>
+          <li><a href="#anime">Game</a></li>
           <li><a href="#contact">Liên hệ</a></li>
         </ul>
 
@@ -885,7 +928,7 @@
 
   <!-- Audio -->
   <audio id="bgMusic" loop preload="auto">
-    <source src="Voyaging Star's Farewell - Wuthering Waves.mp3" type="audio/mpeg" />
+    <source src="Eisodus - Wuthering Waves.mp3" type="audio/mpeg" />
     Trình duyệt của bạn không hỗ trợ âm thanh.
   </audio>
 
@@ -897,15 +940,13 @@
           <h3>Chào mừng đến với thế giới anime của mình</h3>
           <h1>Mình là <span>Nguyễn Lê Anh</span></h1>
           <p>
-            Đây là website cá nhân của mình — nơi mình chia sẻ sở thích về anime,
-            cảm hứng sống, phong cách cá nhân và những điều mình thật sự yêu thích.
-            Với mình, anime không chỉ là giải trí, mà còn là nơi truyền động lực,
-            cảm xúc và sự sáng tạo mỗi ngày.
+            Mình là một người yêu thích anime, thích những câu chuyện có chiều sâu,
+            nhân vật có cảm xúc thật, màu sắc nổi bật và giao diện đẹp mang dấu ấn cá nhân.
           </p>
 
           <div class="hero-buttons">
             <a class="btn btn-primary" href="#about">Khám phá về tôi</a>
-            <a class="btn btn-outline" href="#anime">Anime yêu thích</a>
+            <a class="btn btn-outline" href="#anime">Các tựa game yêu thích</a>
           </div>
         </div>
 
@@ -913,7 +954,7 @@
           <div class="avatar">
               <img src="BAO04645.jpg" alt="BAO04645.jpg">
             </div>
-          <h2>Anime Lover</h2>
+          <h2>Gacha Game Lover</h2>
           <p>
             Tôi là một người yêu thích anime, thích những câu chuyện có chiều sâu,
             nhân vật có cảm xúc thật, màu sắc nổi bật và giao diện đẹp mang dấu ấn cá nhân.
@@ -922,7 +963,7 @@
           <div class="mini-tags">
             <span>🎌 Anime</span>
             <span>🎵 Music</span>
-            <span>💻 Web</span>
+            <span>💻 Gacha</span>
             <span>✨ Creative</span>
           </div>
         </div>
@@ -987,7 +1028,7 @@
       <div class="anime-overlay"></div>
 
       <div class="container anime-inner">
-        <h2 class="section-title reveal">🎌 Anime yêu thích</h2>
+        <h2 class="section-title reveal">🎮 Tựa game yêu thích</h2>
         <p class="section-subtitle reveal">
           Những phong cách anime mà mình yêu thích và luôn mang lại cảm hứng cho mình.
           Phần nền bên dưới sẽ tự động chuyển ảnh để tạo cảm giác sống động hơn.
@@ -996,10 +1037,10 @@
         <div class="anime-grid">
           <article class="anime-card reveal">
             <div class="anime-image">
-              <img src="222.jpg" alt="Shounen Anime" />
+              <video src="yangyang-xuanling-suisui.1920x1080.mp4" poster="Qingxiao 5.jpg" autoplay muted loop playsinline></video>
             </div>
             <div class="anime-content">
-              <h3>Shounen</h3>
+              <h3>Wuthering Waves</h3>
               <p>
                 Mình thích những bộ anime có tinh thần chiến đấu, vượt qua giới hạn,
                 tình bạn và ý chí mạnh mẽ. Đây là thể loại luôn mang lại nguồn động lực rất lớn.
@@ -1009,10 +1050,10 @@
 
           <article class="anime-card reveal">
             <div class="anime-image">
-              <img src="buth.jpg" alt="Fantasy Anime" />
+              <video src="zankou-nte.1920x1080.mp4" autoplay muted loop playsinline></video>
             </div>
             <div class="anime-content">
-              <h3>Fantasy</h3>
+              <h3>Neverness to Everness</h3>
               <p>
                 Những thế giới phép thuật, nhân vật bí ẩn, khung cảnh đẹp và cốt truyện kỳ ảo
                 luôn khiến mình bị cuốn hút và cảm thấy đầy tưởng tượng.
@@ -1022,10 +1063,10 @@
 
           <article class="anime-card reveal">
             <div class="anime-image">
-              <img src="carte.png" alt="Slice of Life Anime" />
+              <video src="trailblazer-team-hsr.1920x1080.mp4" autoplay muted loop playsinline></video>
             </div>
             <div class="anime-content">
-              <h3>Slice of Life</h3>
+              <h3>Honkai: Star Rail</h3>
               <p>
                 Mình cũng thích những bộ anime nhẹ nhàng, gần gũi và nhiều cảm xúc,
                 giúp thư giãn, ấm áp và dễ đồng cảm với những khoảnh khắc đời thường.
@@ -1065,8 +1106,8 @@
           </p>
 
           <div class="socials">
-            <a href="#" target="_blank" rel="noopener">Facebook</a>
-            <a href="#" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.facebook.com/le.anh.nguyen.643923/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://youtube.com/@wetdygm?si=uxa0OXh26k5LBAmq" target="_blank" rel="noopener noreferrer">YouTube</a>
           </div>
         </div>
       </div>
