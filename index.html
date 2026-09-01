@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nguyễn Lê Anh | Anime Profile</title>
-  <meta name="description" content="Website cá nhân chủ đề anime của Nguyễn Lê Anh" />
+  <title>Nguyễn Lê Anh | Myself Profile</title>
+  <meta name="description" content="My Personal Website" />
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -229,11 +229,12 @@
       width: 42px;
       height: 42px;
       object-fit: cover;
-      border-radius: 12px;
+      border-radius: 50%;
       border: 1px solid rgba(255, 255, 255, 0.18);
       box-shadow: 0 0 18px rgba(139, 233, 253, 0.18);
       background: rgba(255, 255, 255, 0.08);
       display: block;
+      overflow: hidden;
     }
 
     .logo {
@@ -625,6 +626,27 @@
       font-size: 0.95rem;
     }
 
+    .game-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 16px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 0 18px rgba(255, 78, 205, 0.25);
+      transition: 0.25s ease;
+    }
+
+    .game-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 24px rgba(255, 78, 205, 0.38);
+    }
+
     /* =========================
        Quote
     ========================= */
@@ -929,10 +951,12 @@
   <!-- Header -->
   <header>
     <nav>
-      <a href="#home" class="brand" aria-label="Wetdy home">
-        <img src="Logo-HCMIU.svg.webp" alt="School logo" class="school-logo" />
-        <span class="logo">Wetdy ✨</span>
-      </a>
+      <div class="brand" aria-label="Wetdy home">
+        <a href="https://www.hcmiu.edu.vn/" target="_blank" rel="noopener noreferrer" aria-label="School homepage">
+          <img src="Logo-HCMIU.svg.webp" alt="School logo" class="school-logo" />
+        </a>
+        <a href="#home" class="logo">Wetdy ✨</a>
+      </div>
 
       <div class="nav-right">
         <ul class="nav-links" id="navLinks">
@@ -1065,6 +1089,7 @@
               <p>
                 Thế giới mở hậu tận thế với nhịp độ chiến đấu dồn dập và cơ chế hành động tốc độ cao. Mình đặc biệt ấn tượng với hệ thống combat mãn nhãn, đòi hỏi kỹ năng linh hoạt cùng nền đồ họa sắc nét.
               </p>
+              <a class="game-download" href="https://wutheringwaves.kurogames.com/en/main/#main" target="_blank" rel="noopener noreferrer">Download</a>
             </div>
           </article>
 
@@ -1077,6 +1102,7 @@
               <p>
                 Sự kết hợp hoàn hảo giữa thế giới mở đô thị hiện đại và các yếu tố siêu nhiên. Mình cực kỳ cuốn hút bởi trải nghiệm lái xe khám phá thành phố sống động cùng phong cách nghệ thuật đầy ấn tượng.
               </p>
+              <a class="game-download" href="https://nte.perfectworld.com/en/" target="_blank" rel="noopener noreferrer">Download</a>
             </div>
           </article>
 
@@ -1089,6 +1115,7 @@
               <p>
                 Hành trình khai phá vũ trụ kỳ vĩ với lối chơi turn-based đậm chất chiến thuật. Cốt truyện sâu sắc, đan xen yếu tố hài hước cùng những pha tung chiêu mang tầm điện ảnh luôn đem lại cho mình trải nghiệm tuyệt vời.
               </p>
+              <a class="game-download" href="https://hsr.hoyoverse.com/en-us/" target="_blank" rel="noopener noreferrer">Download</a>
             </div>
           </article>
         </div>
